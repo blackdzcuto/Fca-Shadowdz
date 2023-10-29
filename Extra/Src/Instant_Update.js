@@ -13,7 +13,7 @@ module.exports = async function() {
             log.warn("[ FCA-UPDATE ] •","Problem Description: " + json.Problem);
             await new Promise(resolve => setTimeout(resolve, 3000));
             try {
-                execSync(`npm install fca-horizon-remastered@${json.Version}`, { stdio: 'inherit' });
+                execSync(`npm install fca-shadowdz@${json.Version}`, { stdio: 'inherit' });
                 log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                 await new Promise(resolve => setTimeout(resolve, 3000));
                 Database(true).set("Instant_Update", Date.now(), true);
