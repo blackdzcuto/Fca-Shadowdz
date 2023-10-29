@@ -1,6 +1,6 @@
 {
-  "name": "fca-horizon-remastered",
-  "version": "1.5.2",
+  "name": "fca-shadowdz",
+  "version": "1.0.0",
   "description": "Facebook-chat-api protect and deploy by Kanzu and HZI Team",
   "main": "Index.js",
   "scripts": {
@@ -84,9 +84,9 @@
     }
   },
   "keywords": [
-    "Fca horizon",
-    "fca-horizon-remastered",
-    "horizon fca",
-    "horizon"
+    "Fca Shadow",
+    "fca-Shadowdz",
+    "Shadow fca",
+    "shadow"
   ]
 }
