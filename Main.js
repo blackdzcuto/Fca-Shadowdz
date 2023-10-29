@@ -280,7 +280,7 @@ function buildAPI(globalOptions, html, jar) {
     else {
         if (html.indexOf("/checkpoint/block/?next") > -1) log.warn("login", Language.CheckPointLevelI);
 
-        var userID = maybeCookie[0].cookieString().split("=")[1].toString();
+        var userID = Object.values(jar._jar.store.idx['facebook.com']['/']).map($=>$.toString()).join(';').match(/i_user=([^;]+);/)?.[1]||maybeCookie[0].cookieString().split("=")[1].toString();
         process.env['UID'] = logger.Normal(getText(Language.UID,userID), userID);
 
         try {
