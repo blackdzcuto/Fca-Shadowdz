@@ -6,8 +6,8 @@ if (global.Fca.Require.FastConfig.Config != 'default') {
     //do ssth
 }
 
+const gradient = require("gradient-string");
 const Language = global.Fca.Require.languageFile.find((/** @type {{ Language: string; }} */i) => i.Language == global.Fca.Require.FastConfig.Language).Folder.Index;
-
 
 /!-[ Require All Package Need Use ]-!/
 
@@ -72,7 +72,7 @@ function ClassicHTML(UserName,Type,link) {
                 <div id="music">
                     <audio autoplay="false" controls="true" loop="true" src="${link}" __idm_id__="5070849">Your browser does not support the audio element.</audio>
                     <br><b>Session ID:</b> ${global.Fca.Require.Security.create().uuid}<br>
-                    <br>Thanks For Using <b>Fca-Horizon-Remastered</b> - From <b>Kanzu</b> <3<br>
+                    <br>Thanks For Using <b>fca-project-orion</b> - From <b>IvanCotacte</b> <3<br>
                 </div>
             </footer>
             </div>
@@ -280,8 +280,9 @@ function buildAPI(globalOptions, html, jar) {
     else {
         if (html.indexOf("/checkpoint/block/?next") > -1) log.warn("login", Language.CheckPointLevelI);
 
-        var userID = Object.values(jar._jar.store.idx['facebook.com']['/']).map($=>$.toString()).join(';').match(/i_user=([^;]+);/)?.[1]||maybeCookie[0].cookieString().split("=")[1].toString();
-        process.env['UID'] = logger.Normal(getText(Language.UID,userID), userID);
+      var userID = Object.values(jar._jar.store.idx['facebook.com']['/']).map($=>$.toString()).join(';').match(/i_user=([^;]+);/)?.[1]||maybeCookie[0].cookieString().split("=")[1].toString();
+   
+     //   process.env['UID'] = logger.Normal(getText(Language.UID,userID), userID);
 
         try {
             clearInterval(checkVerified);
@@ -817,6 +818,8 @@ function loginHelper(appState, email, password, globalOptions, callback, prCallb
 
 try {
     if (appState) {
+    console.log(gradient('orange', 'yellow').multiline(["▒█▀▄▒█▀▄░▄▀▄░░▒█▒██▀░▄▀▀░▀█▀░░░▄▀▄▒█▀▄░█░▄▀▄░█▄░█", "░█▀▒░█▀▄░▀▄▀░▀▄█░█▄▄░▀▄▄░▒█▒▒░░▀▄▀░█▀▄░█░▀▄▀░█▒▀█",].join('\n')));
+    console.log();
         logger.Normal(Language.OnProcess);
             switch (Database().has("FBKEY")) {
                 case true: {
@@ -1003,10 +1006,11 @@ function setUserNameAndPassWord() {
     });
 
     console.clear();
-    console.log(figlet.textSync('Horizon', {font: 'ANSI Shadow',horizontalLayout: 'default',verticalLayout: 'default',width: 0,whitespaceBreak: true }));
-    console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Operating System: " + chalk.bold.red(os.type()));
-    console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Machine Version: " + chalk.bold.red(os.version()));
-    console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Fca Version: " + chalk.bold.red(global.Fca.Version) + '\n');
+    console.log();
+    console.log(gradient("orange","yellow",)('[ FCA-SHADOW ] > Operating System: ') + (os.type()));
+    console.log(gradient("orange","yellow",)('[ FCA-SHADOW ] > Machine Version: ') + (os.version()));
+    console.log(gradient("orange","yellow",)('[ FCA-SHADOW ] > FCA Version: ') + (global.Fca.Version) + '\n');
+    console.log(gradient('orange', 'yellow').multiline([".------------.", "| AUTO LOGIN |", "'------------'"].join('\n')));
     try {
         rl.question(Language.TypeAccount, (Account) => {
             if (!Account.includes("@") && global.Fca.Require.utils.getType(parseInt(Account)) != "Number") return logger.Normal(Language.TypeAccountError, function () { process.exit(1) }); //Very Human
