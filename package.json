@@ -1,24 +1,26 @@
 {
   "name": "fca-shadowdz",
-  "version": "1.0.0",
-  "description": "Facebook-chat-api protect and deploy by Kanzu and HZI Team",
-  "main": "Index.js",
+  "version": "1.1.2",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "Avery, David, Maude, Benjamin, UIRI, KanzuWakazaki",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KanzuXHorizon/Fca-Horizon-Remastered/issues"
+    "url": "https://github.com/ivancotacte/fca-project-orion/issues"
   },
-  "homepage": "https://github.com/KanzuXHorizon/Fca-Horizon-Remastered#readme",
+  "homepage": "https://github.com/ivancotacte/fca-project-orion#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/KanzuXHorizon/Fca-Horizon-Remastered.git"
+    "url": "git://github.com/ivancotacte/fca-project-orion.git"
   },
   "dependencies": {
     "aes-js": "latest",
+    "ansi-to-html": "latest",
     "assert": "latest",
+    "axios": "^1.5.0",
     "better-sqlite3": "7.6.2",
     "bluebird": "latest",
     "chalk": "4.1.2",
@@ -28,26 +30,30 @@
     "duplexify": "^4.1.2",
     "encode32": "latest",
     "express": "latest",
+    "figlet": "^1.6.0",
     "file-url": "^3.0.0",
+    "form-data": "^4.0.0",
+    "fs-extra": "^11.1.1",
     "got": "^11.8.6",
     "https-proxy-agent": "latest",
     "is-hexcolor": "^1.0.0",
     "lodash": "latest",
     "moment": "^2.29.4",
-    "mqtt": "latest",
+    "mqtt": "4.3.7",
     "npmlog": "latest",
     "os": "latest",
     "path": "latest",
     "pretty-ms": "7.0.1",
+    "puppeteer": "^21.1.1",
     "readable-stream": "^4.4.0",
     "readline": "latest",
     "request": "latest",
+    "speakeasy": "latest",
     "totp-generator": "latest",
     "tough-cookie": "^4.1.2",
     "uuid": "latest",
-    "speakeasy": "latest",
     "ws": "^8.13.0",
-    "ansi-to-html": "latest"
+    "gradient-string": "^2.0.2"
   },
   "engines": {
     "node": ">=14.x"
@@ -83,10 +89,5 @@
       ]
     }
   },
-  "keywords": [
-    "Fca Shadow",
-    "fca-Shadowdz",
-    "Shadow fca",
-    "shadow"
-  ]
+  "keywords": []
 }
